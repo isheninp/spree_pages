@@ -1,6 +1,6 @@
 # SpreePages
 
-Introduction goes here.
+Spree static page management plugin with custom templates and Summernote with Bootstrap 4 (WYSIWYG editor).
 
 ## Installation
 
@@ -21,7 +21,21 @@ Introduction goes here.
 
 4. Restart your server
 
-  If your server was running, restart it so that it can find the assets properly.
+5. Settings
 
+You should create at least one default template:
+app/views/pages/templates/default.html.erb
 
+Main app should have defined error_404, for example:
+
+#application_controller.rb
+  def error_404
+    respond_to do |format|
+      format.html { render 'error/error_404', :status => :not_found }
+      format.xml  { head :not_found }
+      format.json { head :not_found }
+    end
+  end
+
+  
 Copyright (c) 2018 Pavel Ishenin, released under the New BSD License
