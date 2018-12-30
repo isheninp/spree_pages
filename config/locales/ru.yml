@@ -1,0 +1,25 @@
+ru:
+  spree:
+    pages: Страница
+    new_page: Новая страница
+  activerecord:
+    attributes:
+      spree/page:
+        title: Название
+        template: Шаблон
+        slug: URL
+        body: Контент страницы
+    models:
+      spree/page:
+        one: Страница
+        other: Страницы
+  spree:
+    models:
+      spree/page:
+        many: "Страницы"
+        one: "Страница"
+        other: "Страница"
+    new_page: Добавить страницу
+    admin:
+      tab:
+        pages: "Страницы"

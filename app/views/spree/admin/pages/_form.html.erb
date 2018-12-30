@@ -1,0 +1,59 @@
+<%= render partial: 'spree/shared/error_messages', locals: { target: resource } %>
+
+<%= form_for [:admin, resource] do |f| %>
+  <div class="row" data-hook="admin_page_form_fields">
+    <div class="col-md-6">
+
+      <div class="form-group">
+        <%= f.label :published %>
+        <%= f.check_box :published %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :title %> <span class="required">*</span>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :template %>
+        <%= f.text_field :template %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :slug %> <span class="required">*</span>
+        <%= f.text_field :slug, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :body %> <span class="required">*</span>
+        <%= f.text_area :body, rows: 40, class: 'form-control', id: 'summernote' %>
+      </div>
+    </div>
+
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Текст страницы',
+        tabsize: 2,
+        height: 600
+      });
+    </script>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :meta_title %>
+        <%= f.text_field :meta_title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :meta_description %>
+        <%= f.text_field :meta_description, class: 'form-control' %>
+      </div>
+
+
+    </div>
+  </div>
+
+  <%= render "spree/admin/shared/#{resource.new_record? ? 'new' : 'edit'}_resource_links" %>
+<% end %>
