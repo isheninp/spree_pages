@@ -28,7 +28,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :body %> <span class="required">*</span>
-        <%= f.text_area :body, rows: 40, class: 'form-control', id: 'summernote' %>
+        <%= f.text_area :body, rows: 30, class: 'form-control', id: 'summernote' %>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
       $('#summernote').summernote({
         placeholder: 'Текст страницы',
         tabsize: 2,
-        height: 600
+        height: 500
       });
     </script>
 
