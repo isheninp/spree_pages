@@ -28,7 +28,7 @@
       <% @pages.each do |page| %>
         <tr data-hook="admin_pages_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
           <td><%= page.title %></td>
-          <td><%= page.published %></td>
+          <td><%= page.published ? '+' : '-' %></td>
           <td><%= page.template %></td>
           <td><%= page.slug %></td>
           <td class="actions text-right" data-hook="admin_pages_index_row_actions">
