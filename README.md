@@ -2,6 +2,10 @@
 
 Spree static page management plugin with custom templates and Summernote with Bootstrap 4 (WYSIWYG editor).
 
+Your pages urls will be:
+  www.site.com/pages/about
+  www.site.com/pages/your_page
+
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
