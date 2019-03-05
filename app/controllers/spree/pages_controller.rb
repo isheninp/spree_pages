@@ -8,6 +8,7 @@ module Spree
       if @page.nil? || !@page.published
         error_404
       else 
+        @title = @page.meta_title
         render "/pages/templates/#{@page.template}"
       end
     end
