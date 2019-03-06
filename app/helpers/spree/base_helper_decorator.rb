@@ -20,7 +20,6 @@ Spree::BaseHelper.module_eval do
       
       if object.is_a?(Spree::Page)
         meta[:description]=object.meta_description
-        @title = object.meta_title
       end
       
       meta

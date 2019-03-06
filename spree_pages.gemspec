@@ -7,7 +7,7 @@ require 'spree_pages/version'
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_pages'
-  s.version     = '1.2'
+  s.version     = '1.3'
   s.summary     = 'Simple static pages management'
   s.description = 'Simple static pages management'
   s.required_ruby_version = '>= 2.2.7'
