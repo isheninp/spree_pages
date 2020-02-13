@@ -32,6 +32,7 @@ app/views/pages/templates/default.html.erb
 
 Main app should have defined error_404, for example:
 
+```
 #application_controller.rb
   def error_404
     respond_to do |format|
@@ -40,6 +41,6 @@ Main app should have defined error_404, for example:
       format.json { head :not_found }
     end
   end
-
+```
   
 Copyright (c) 2018 Pavel Ishenin, released under the New BSD License
